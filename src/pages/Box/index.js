@@ -3,7 +3,8 @@ import api from "../../services/api";
 import { distanceInWords } from 'date-fns';
 import pt from 'date-fns/locale/pt';
 import Dropzone from 'react-dropzone';
-import socket from 'socket.io-client'
+import socket from 'socket.io-client';
+import Helmet from 'react-helmet';
 
 import { MdInsertDriveFile } from 'react-icons/md'
 
@@ -47,6 +48,7 @@ export default class Box extends Component {
   render() {
     return(
       <div id="box-container">
+        <Helmet title="Home - ProntecBox" />
         <header>
           <img src={logo} alt="" />
           <h1>{this.state.box.title}</h1>

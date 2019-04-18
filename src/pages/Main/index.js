@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import api from '../../services/api';
+import Helmet from 'react-helmet';
 
 import logo from '../../assets/logo.svg';
 import './styles.css';
@@ -17,7 +18,8 @@ export default class Main extends Component {
             title: this.state.newBox,
         });
 
-        this.props.history.push(`/box/${response.data._id}`); 
+        this.props.history.push(`/box/${response.data._id}`);
+         
     };
 
     handleInputChange = e => {
@@ -27,6 +29,7 @@ export default class Main extends Component {
     render() {
         return(
             <div id="main-container">
+                <Helmet title="Login - ProntecBox" />
                 <form onSubmit ={this.handleSubmit}>
                     <img src={logo} alt=""/>
                     <input 
