@@ -8,7 +8,8 @@ import Helmet from 'react-helmet';
 
 import { MdInsertDriveFile } from 'react-icons/md'
 
-import logo from "../../assets/logo.svg"
+import logo from "../../assets/logo.svg";
+import logoheader from "../../assets/logo-header.svg";
 import "./styles.css";
 
 export default class Box extends Component {
@@ -48,7 +49,11 @@ export default class Box extends Component {
   render() {
     return(
       <div id="box-container">
-        <Helmet title="Home - ProntecBox" />
+        <Helmet>
+          <title>Home - ProntecBox</title>
+          
+          <link rel={logoheader} href={logoheader}/>
+        </Helmet>
         <header>
           <img src={logo} alt="" />
           <h1>{this.state.box.title}</h1>

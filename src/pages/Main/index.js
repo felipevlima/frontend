@@ -29,7 +29,7 @@ export default class Main extends Component {
     render() {
         return(
             <div id="main-container">
-                <Helmet title="Login - ProntecBox" />
+                <Helmet title="Criar - ProntecBox" />
                 <form onSubmit ={this.handleSubmit}>
                     <img src={logo} alt=""/>
                     <input 
